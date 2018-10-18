@@ -73,7 +73,7 @@ def getCentresVectors(centres_raw):
 
 def doNextIteration():
     matchVectors = np.hstack((np.abs(np.r_[centres[:,[2]] - centres[:,[0]]]) < 0.001,
-                              np.abs(np.r_[centres[:,[2]] - centres[:,[0]]]) < 0.001))
+                              np.abs(np.r_[centres[:,[3]] - centres[:,[1]]]) < 0.001))
     return ~np.all(matchVectors)
 
 def plotScattersOnly():
